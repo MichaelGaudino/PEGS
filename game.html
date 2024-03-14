@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Game</title>
+    <link rel="stylesheet" href="game-styles.css">
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- Back button container -->
+    <div class="back-button-container">
+        <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+    </div>
+
+    <div id="gameOver" style="display: none;">
+        <h1>GAME OVER</h1>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+    
+    <div id="score"></div>
+    <script src="game.js"></script>
+   
+    
+</body>
+</html>

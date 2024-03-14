@@ -1,0 +1,256 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  background-image: url(http://www.transparenttextures.com/patterns/worn-dots.png);
+}
+
+.spinner-container {
+    position: relative;
+    text-align: center;
+    margin-top: 200px; /* Adjust this value as needed */
+    padding-top: 50px; /* Add padding to lower the content */
+}
+
+h5 {
+  font-weight: 120px;
+}
+
+.coming-soon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+}
+
+.project-name {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.slogan h4 {
+  font-family: 'Arial', sans-serif; /* Change the font family as per your preference */
+  font-size: 14px; /* Adjust the font size */
+  color: #333; /* Set the text color */
+  text-shadow: 0px 0px -1px rgba(0, 0, 0, 0.5); /* Add a text shadow for a cool effect */
+  letter-spacing: 2px; /* Adjust letter spacing */
+  text-align: center; /* Center align the text */
+  margin-bottom: 10px; /* Add some margin at the bottom */
+}
+
+h6 {
+  text-align: center;
+}
+
+
+/* Spinner styles */
+.loader {
+  width: 100px;
+  aspect-ratio: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  background: #fff;
+  filter: blur(5px) contrast(10);
+  mix-blend-mode: darken;
+  margin: 0 auto;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  background: linear-gradient(#000 0 0) left, linear-gradient(#000 0 0) right;
+  background-size: 20px 40px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+
+.loader:after {
+  height: 20px;
+  width: 20px;
+  margin: auto 0;
+  border-radius: 50%;
+  background: #000;
+  animation: l10 1s infinite;
+}
+
+@keyframes l10 {
+  90%,
+  100% {
+      transform: translate(300%);
+  }
+}
+
+/* Dropdown Menu styles */
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: goldenrod;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #7e7e7e;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: whitesmoke;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.75);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+  position: relative;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/* landing.css */
+
+/* Style for the announcement bar */
+.announcement-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
+    padding: 10px 0; /* Add padding */
+    font-size: 18px; /* Adjust font size */
+    text-align: center; /* Center align text */
+}
+
+
+.announcement-text {
+  display: inline-block; /* Ensure the text stays inline and doesn't wrap */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 34px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Arial', sans-serif; /* Specify font family */
+  text-transform: uppercase; /* Convert text to uppercase */
+  animation: moveText 10s linear infinite; /* Apply the animation */
+  line-height: 10px; /* Adjust line height to vertically center the text */
+}
+
+/* Animation for moving text */
+@keyframes moveText {
+  0% {
+      transform: translateX(-100%); /* Start from the left edge */
+  }
+  50% {
+      transform: translateX(100%); /* Move to the right edge */
+  }
+  100% {
+      transform: translateX(-100%); /* Return to the left edge */
+  }
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInOut {
+  0% {
+      opacity: 0.5; /* Start with reduced opacity */
+  }
+  100% {
+      opacity: 1; /* Fade in to full opacity */
+  }
+}
+
+/* styles.css */
+
+.random-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: black;
+  opacity: 0;
+  animation: fadeInOut 9.1s infinite; /* Increased animation duration to make the fading smoother */
+}
+
+@keyframes fadeInOut {
+  10%, 10% {
+    opacity: 1; /* Start with fully transparent */
+  }
+  20%, 20% {
+    opacity: 1; /* Quickly fade in */
+  }
+  30%, 30% {
+    opacity: 1; /* Quickly fade out */
+  }
+}

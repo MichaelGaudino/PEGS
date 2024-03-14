@@ -1,0 +1,94 @@
+/* General styles */
+body {
+    background-color: #1f1f1f; /* Dark gray background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+    color: #FFFFFF; /* White text color */
+}
+
+
+/* Back button container */
+.back-button-container {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+}
+
+/* Back button styles */
+.back-button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+/* Hover effect for the back button */
+.back-button:hover {
+    background-color: #45a049;
+}
+
+
+#gameCanvas {
+    display: block;
+    width: 800px; /* Set canvas width */
+    height: 600px; /* Set canvas height */
+    background-color: #1f1f1f; /* Dark gray background color */
+    margin: 0 auto; /* Center the canvas horizontally */
+    border: 5px solid #FFFFFF; /* White border around the canvas */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #FFFFFF; /* White color for the score */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Styling for game over message */
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+
+/* Styling for the "Play Again" button */
+#gameOver button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px; /* Add some top margin */
+    transition-duration: 0.4s;
+}
+
+/* Hover effect for the "Play Again" button */
+#gameOver button:hover {
+    background-color: #45a049;
+}

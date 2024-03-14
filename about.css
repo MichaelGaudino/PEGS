@@ -1,0 +1,81 @@
+/* Back button container */
+.back-button-container {
+    position: fixed;
+    top: 45px;
+    left: 45px;
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+/* Back button styles */
+.back-button {
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+/* Hover effect for the back button */
+.back-button:hover {
+    background-color: #555; /* Darken background color on hover */
+}
+
+/* Styles for the about section */
+.about-section {
+    padding: 50px; /* Add padding to create space around the content */
+    text-align: center; /* Center-align the content */
+    background-color: #f9f9f9; /* Add a light background color */
+    border-bottom: 2px solid #ccc; /* Add a bottom border for separation */
+    border-radius: 10px; /* Add border radius for a softer look */
+}
+
+.about-section h1 {
+    font-size: 48px; /* Increase font size for the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #333; /* Set text color */
+    font-family: 'Roboto', sans-serif; /* Use a different font */
+}
+
+.about-section p {
+    font-size: 20px; /* Set font size for paragraph */
+    line-height: 1.6; /* Increase line height for better readability */
+    color: #666; /* Set text color */
+}
+
+/* Styles for the legal section */
+.legal-section {
+    padding: 50px; /* Add padding to create space around the content */
+    text-align: center; /* Center-align the content */
+    background-color: #f0f0f0; /* Add a slightly darker background color */
+    border-radius: 10px; /* Add border radius for a softer look */
+}
+
+.legal-section h2 {
+    font-size: 36px; /* Increase font size for the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #333; /* Set text color */
+    font-family: 'Roboto', sans-serif; /* Use a different font */
+}
+
+.legal-section ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+.legal-section li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+.legal-section a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.legal-section a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #0056b3; /* Darken link color on hover */
+}

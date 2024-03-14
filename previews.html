@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEGS - Previews</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Style for the preview container */
+        .preview-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center; /* Center text horizontally */
+            padding: 5px; /* Add padding for spacing */
+        }
+
+        /* Style for the gif container */
+        .preview-container .gif-container {
+            display: inline-block; /* Ensure container fits tightly around the image */
+            border: 10px solid black; /* Add thin black border around the gif container */
+            box-sizing: border-box; /* Include padding and border in the container's dimensions */
+            max-width: 70%; /* Limit container width */
+            margin-bottom: 20px; /* Add margin at the bottom for spacing */
+        }
+
+        /* Style for the preview image */
+        .preview-container img {
+            width: 100%; /* Ensure the image fills its container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any extra spacing due to inline elements */
+        }
+
+        /* Style for the title */
+        .preview-container h1 {
+            font-size: 34px; /* Adjust font size */
+            margin: 10px 0 10px; /* Adjust margin for spacing */
+            color: white; /* Set text color */
+            text-shadow: -2px 3px 7px black, 2px -3px 7px black; /* Add text shadow for emphasis and border effect */
+            font-weight: bold; /* Make the text bold */
+        }
+
+        /* Style for the button */
+        .return-button {
+            position: fixed;
+            top: -55px; /* Adjust top position */
+            left: -425px; /* Adjust left position */
+            padding: 15px 30px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            z-index: 1; /* Ensure button appears above other content */
+        }
+
+        .return-button:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="announcement-bar">
+        <p class="announcement-text">#PEGS COMING SOON!</p>
+    </div>
+    <div class="preview-container">
+        <h1>Over 140 Hand Drawn Traits</h1>
+        <div class="gif-container">
+            <img src="PegsPreviewGif.gif" alt="Preview GIF"> <!-- Replace "preview.gif" with your actual GIF file -->
+        </div>
+        <a href="index.html" class="return-button">Back</a>
+    </div>
+</body>
+</html>
